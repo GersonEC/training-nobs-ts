@@ -40,7 +40,7 @@ interface EventMap {
   checkout: BaseEvent
 };
 
-function sendEvent<Name extends keyof EventMap>(name: string, data: EventMap[Name]): void {
+function sendEvent<Name extends keyof EventMap>(name: Name, data: EventMap[Name]): void {
   console.log([name, data]);
 }
 
